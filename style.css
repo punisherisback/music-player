@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: 'Ubuntu', sans-serif, Tahoma, Verdana, sans-serif;
+
+    color: rgb(255, 255, 255);
+    background: linear-gradient(45deg, #092003, #3a8b19, #44c95c);
+
+
+}
+
+/* Home page */
+.home {
+    display: flex;
+    height: 90vh;
+
+}
+
+
+/* left conainer*/
+.homeleft {
+    width: 25vw;
+    height: 90vh;
+    box-sizing: border-box;
+
+}
+
+.home-left-header {
+    width: 24vw;
+    padding: 15px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.home-left-header ul li {
+    width: 25px;
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.homeleft img {
+    filter: invert();
+
+}
+
+
+
+.home-left-main {
+    width: 24vw;
+    height: 68vh;
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.home-left-main img {
+    width: 25px;
+}
+
+.library {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.create {
+    height: 35vh;
+    overflow: auto;
+}
+
+.createplaylist {
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.createplaylist button {
+    background-color: white;
+    border-radius: 50px;
+    width: 120px;
+    height: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.home-left-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: gray;
+    padding: 30px;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.home-left-main .language button {
+    background-color: black;
+    border: 1px solid gray;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    gap: 5px;
+    border-radius: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+
+.home-left-main .language button img {
+    width: 16px;
+}
+
+
+.premium {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 8.5vh;
+    background: linear-gradient(to right, #058fb9, #ffff1c);
+    margin-top: 10px;
+    position: fixed;
+
+}
+
+.premium button {
+    background-color: white;
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+/*right container*/
+
+.homeright {
+    width: 75vw;
+    height: 90vh;
+
+    margin-right: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.home-right-header {
+    height: 9vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.home-right-header .slider img {
+    width: 25px;
+}
+
+.home-right-header button {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.home-right-header .rightslider img {
+    transform: rotateY(0.5turn);
+}
+
+.home-right-header .signup {
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid black;
+}
+
+.home-right-header .login {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.home-right-main {
+    height: 81.5vh;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+/* artist */
+.home-right-main {
+    padding: 60px 20px 20px 20px;
+}
+
+.home-right-main .artists {
+    display: flex;
+    overflow: hidden;
+
+    margin-top: 10px;
+
+    position: relative;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+
+.home-right-main .artists .cards {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    cursor: pointer;
+    background-color: #171717;
+    border-radius: 10px;
+
+}
+
+.home-right-main .artists .cards .cardimage {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid #1ed760;
+
+
+}
+
+.home-right-main .artists .cards .cardimage img {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.home-right-main .artists .cards h5 {
+    color: gray;
+}
+
+.home-right-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.home-right-footer .links {
+    display: flex;
+    gap: 100px;
+}
+
+
+
+.home-right-footer .links li {
+    list-style: none;
+    padding-top: 10px;
+    color: gray;
+    font-weight: bolder;
+}
+
+.home-right-footer .social {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.home-right-footer .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+}
+
+.home-right-footer img {
+
+    filter: invert();
+}

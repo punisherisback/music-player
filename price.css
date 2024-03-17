@@ -1,0 +1,150 @@
+body {
+
+    font-family: 'Ubuntu', sans-serif, Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(45deg, #092003, #3a8b19, #44c95c);
+
+
+}
+
+
+
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    margin: 15px;
+
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    margin: 5px;
+}
+
+/* Pricing page */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 70px;
+}
+
+.plan {
+    text-align: center;
+    border: 1px;
+    padding: 20px;
+    border-radius: 50px;
+    width: 320px;
+    background-color: black;
+    margin-bottom: 20px;
+    box-shadow: 15px 15px 50px rgb(0, 0, 0);
+    transition: background-color 0.2s, transform 0.2s;
+
+}
+
+.plan:hover, .plan:active {
+    transform: rotate(3deg) scale(1.1);
+    color: green;
+    background-color: white;
+
+
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+li {
+    text-align: justify;
+    border-bottom: solid 1px white;
+    border-radius: 5px;
+    height: 8vh;
+
+}
+
+li::before {
+    content: "\2713";
+    color: green;
+    margin-right: 5px;
+    font-weight: 1000px;
+    font-size: larger;
+}
+
+li:hover {
+    border-bottom: solid 3px black;
+}
+
+button {
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+
+
+
+}
+
+button:hover {
+    background-color: black;
+
+}
+
+p {
+    color: black;
+    font-size: 1em;
+    text-align: center;
+
+}
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .plan {
+        margin-bottom: 20px;
+       width: 90%;
+        
+    }
+
+    .plan:hover{
+        transform: none;
+        color: inherit;
+        background-color: inherit;
+    }
+    h2 {
+        font-size: 0.8em; 
+    }
+
+    h3 {
+        font-size: 0.8em; 
+    }
+
+    ul {
+        font-size: 0.8em; 
+    }
+
+    button {
+        font-size: 0.8em; 
+    }
+}
