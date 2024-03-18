@@ -14,6 +14,8 @@ body {
 
 }
 
+
+
 /* Home page */
 .home {
     display: flex;
@@ -40,13 +42,36 @@ body {
 }
 
 .home-left-header ul li {
-    width: 25px;
+    
     display: flex;
     list-style: none;
-    gap: 15px;
-    padding: 10px;
+    
+    padding: 5px;
     cursor: pointer;
 }
+
+.home-left-header ul button img{
+    width: 20px;
+    margin-right: 10px;
+    
+}
+.home-left-header ul button{
+    width: 110px;
+    background-color: black;
+    color: white;
+    border: 0.5px solid white;
+    border-radius: 25px;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.home-left-header ul button:hover{
+    
+    border-color: #1ed760;
+    
+}
+
 
 .homeleft img {
     filter: invert();
@@ -68,14 +93,27 @@ body {
     width: 25px;
 }
 
+
 .library {
-    padding: 15px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
 
 }
+.library:hover{
+    
+    color: #1ed760;
+    
+}
+.library .libraryimage{
+    padding: 5px;
+}
 
+.library .libraryimage:hover{
+    background-color: #242424;
+    border-radius: 10px;
+}
 .create {
     height: 35vh;
     overflow: auto;
@@ -100,15 +138,39 @@ body {
     cursor: pointer;
 }
 
+.createplaylist button:hover {
+    background-color: #1ed760;
+    transform: scale(1.1);
+    transition: 0.25s ease all;
+}
+
 .home-left-footer {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px;
+    padding: 15px;
+   
+}
+.home-left-footer .link{
     color: gray;
-    padding: 30px;
+    padding: 10px;
     font-size: 12px;
     font-weight: bold;
+    cursor: pointer;
+}
+.home-left-footer .link:hover{
+    background-color: #242424;
+    border-radius: 15px;
+    color: white;
+    
+}
 
+.copyright{
+    color: gray;
+    
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px;
 }
 
 .home-left-main .language button {
@@ -124,6 +186,11 @@ body {
     cursor: pointer;
 
 }
+.home-left-main .language button:hover{
+    
+    border-color: #1ed760;
+}
+
 
 .home-left-main .language button img {
     width: 16px;
@@ -292,6 +359,7 @@ body {
     display: flex;
     gap: 20px;
     padding: 20px;
+    
 
 }
 
@@ -303,7 +371,7 @@ body {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-
+    cursor: pointer;
 }
 
 .home-right-footer img {
