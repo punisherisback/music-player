@@ -28,11 +28,13 @@ button{
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
+    
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background:#171717; 
+    background:#171717;
+    border-radius: 15px; 
   }
   
   /* Handle */
@@ -131,11 +133,7 @@ button{
     cursor: pointer;
 
 }
-.library:hover{
-    
-    color: #1ed760;
-    
-}
+
 .library .libraryimage{
     padding: 5px;
 }
@@ -150,20 +148,45 @@ button{
 }
 
 .createplaylist {
+    display: flex;
+    justify-content:space-evenly;
     background-color: #242424;
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    display: flex;
-    flex-direction: column;
     gap: 15px;
 }
+
+.mysongs{
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.mysongs li{
+    padding: 10px;
+    border-radius: 15px;
+    list-style: none;
+    margin: 5px;
+    background-color: #171717;
+    cursor: pointer;
+}
+.mysongs li:hover{
+    background-color: #242424;
+    border: 2px solid #171717;
+}
+
 
 .createplaylist button {
     background-color: white;
     border-radius: 50px;
-    width: 120px;
-    height: 35px;
+    padding: 10px;
+    margin: -10px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -374,8 +397,6 @@ button{
 .home-right-main .artists .cards .imgplay{
     width: 45px;
     position: absolute;
-    
-    z-index: 2;
     right: 16px;
     bottom: 90px;
     background-color:#171717;
