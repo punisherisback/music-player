@@ -119,6 +119,7 @@ button{
     margin: 5px;
     border-radius: 10px;
     box-sizing: border-box;
+   
 }
 
 .home-left-main img {
@@ -142,19 +143,8 @@ button{
     background-color: #242424;
     border-radius: 10px;
 }
-.create {
-    height: 35vh;
-    overflow: auto;
-}
-
-.createplaylist {
-    display: flex;
-    justify-content:space-evenly;
-    background-color: #242424;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    gap: 15px;
+.home-left-main h3{
+    margin-left: 20px;
 }
 
 .mysongs{
@@ -165,10 +155,15 @@ button{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    
+    overflow: auto;
+    height: 30vh;
 }
 
 .mysongs li{
+    display: flex;
+    gap: 15px;
+    height: 25px;
+    align-items: center;
     padding: 10px;
     border-radius: 15px;
     list-style: none;
@@ -180,7 +175,10 @@ button{
     background-color: #242424;
     border: 2px solid #171717;
 }
-
+.mysongs .songname{
+    width: 170px;
+    overflow: hidden;
+}
 
 .createplaylist button {
     background-color: white;
@@ -475,7 +473,7 @@ button{
 
 .homeright .music-player{
         height: 10vh;
-        width: 75vw;
+        width: 74vw;
         display: flex;
         justify-content: center;
         align-items: center;
