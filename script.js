@@ -1,4 +1,3 @@
-console.log("hloo babes")
 
 // get the table list of songs
 async function getsongs() {
