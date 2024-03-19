@@ -363,7 +363,7 @@ button{
     cursor: pointer;
     background-color: #171717;
     border-radius: 10px;
-
+    position: relative;
 }
 .home-right-main .artists .cards:hover{
     background-color: #242424;
@@ -371,12 +371,24 @@ button{
     transition: 0.25s ease all;
 }
 
-
+.home-right-main .artists .cards .imgplay{
+    width: 45px;
+    position: absolute;
+    
+    z-index: 2;
+    right: 16px;
+    bottom: 90px;
+    background-color:#171717;
+    
+    border-radius: 50%;
+}
 .home-right-main .artists .cards .cardimage {
     width: 160px;
     height: 160px;
     border-radius: 50%;
     border: 2px solid #1ed760;
+    box-shadow: 0px 0px 15px 15px #171717;
+
 
 
 }
@@ -386,6 +398,8 @@ button{
     width: 160px;
     object-fit: cover;
     border-radius: 50%;
+    bottom: 0;
+    position: relative;
 }
 
 .home-right-main .artists .cards h5 {
