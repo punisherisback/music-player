@@ -470,18 +470,32 @@ button{
 
     filter: invert();
 }
-
-.homeright .music-player{
-        height: 10vh;
+.homeright .playbar{
+    height: 10vh;
         width: 74vw;
+        position:sticky;
+        bottom: 10.5vh;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: black;
+}
+.homeright .playbar .seekbar{
+    width: 74vw;
+    height: 3px;
+    background-color: #1ed760;
+    border: 2px solid black;
+}
+.homeright .music-player{
+        
         display: flex;
         justify-content: center;
         align-items: center;
-       background-color: black;
-        position:sticky;
-        bottom: 10.5vh;
+       
+        
         gap: 40px;
-        border-radius: 15px;
+        
 }
 .homeright .music-player button{
 
@@ -499,5 +513,6 @@ button{
 .homeright .music-player img{
     width: 30px;
 }
+
 
 

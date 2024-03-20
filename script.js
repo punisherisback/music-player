@@ -1,4 +1,6 @@
 
+
+let currentsong = new Audio()
 // get the table list of songs
 async function getsongs() {
     let a = await fetch("http://127.0.0.1:3000/assets/songs/")
@@ -24,7 +26,18 @@ async function getsongs() {
     return songs
 
 }
+
+const playmusic = (track) =>{
+    
+    currentsong.src = "/assets/songs/" + track
+    currentsong.play()
+}
+
 async function main() {
+
+    
+
+    // get the list of songs
     let songs = await getsongs()
     console.log(songs)
 
@@ -32,10 +45,25 @@ async function main() {
     let songul = document.querySelector(".mysongs").getElementsByTagName("ul")[0]
     for (const song of songs) {
         songul.innerHTML = songul.innerHTML + `<li> <img src="assets/imgplay.svg" alt="play"> 
-        <div class="songname"> ${song}</div>
+        <div class="songname">${song}</div>
         <div>Sahil</div>
         </li>`
     }
+
+    // attach an eventlistner to each song
+    Array.from(document.querySelector(".mysongs").getElementsByTagName("li")).forEach(e => {
+        e.addEventListener("click", element=>{
+
+            console.log(e.getElementsByTagName("div")[0].innerHTML)
+            playmusic(e.getElementsByTagName("div")[0].innerHTML)
+        })
+        
+    })
+
+    // attach an eventlisyner to play, pause and go to the next or previous songs
+        if (currentsong.paused) {
+            currentsong.play()
+        }
     // play songs
     var audio = new Audio(songs[1])
     audio.play()
