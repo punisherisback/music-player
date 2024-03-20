@@ -3,7 +3,7 @@
 let currentsong = new Audio()
 // get the table list of songs
 async function getsongs() {
-    let a = await fetch("http://127.0.0.1:3000/assets/songs/")
+    let a = await fetch("https://github.com/punisherisback/music-player/tree/main/assets/songs/")
 
     let response = await a.text()
 
