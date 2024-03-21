@@ -368,7 +368,8 @@ button{
 }
 /* artist */
 .home-right-main {
-    height: 81.5vh;
+    height: 72.5vh;
+    width: 74vw;
     box-sizing: border-box;
     background-color: black;
     border-radius: 10px;
@@ -490,7 +491,7 @@ button{
     height: 9vh;
         width: 74vw;
         position:sticky;
-        bottom: 10.5vh;
+       position: absolute;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
@@ -583,6 +584,17 @@ button{
          z-index: 2;
         
     }
+    .home-right-main {
+        height: 72.5vh;
+      
+        box-sizing: border-box;
+        background-color: black;
+        border-radius: 10px;
+        overflow: auto;
+        padding: 60px 20px 20px 20px;
+    }
+    
+
 
     .homeleft .home-left-main{
         overflow: auto;
@@ -592,8 +604,13 @@ button{
         width: 100vw;
         
     }
+    .homeright .home-right-main{
+        width: 100vw;
+        overflow-x: hidden;
+    }
     .homeright .home-right-main .artists{
         justify-content: center;
+    
     }
 
     .homeright .playbar{
