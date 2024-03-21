@@ -125,7 +125,19 @@ currentsong.addEventListener("timeupdate", () => {
 
 // add eventlistner to seekbar container
 document.querySelector(".seekbar-container").addEventListener("click", e=>{
-    document.querySelector(".seekbar").style.marginLeft = (e.offsetX/e.target.getBoundingClientRect().width)*100 + "%"
+    let percent = (e.offsetX/e.target.getBoundingClientRect().width)*100 
+    document.querySelector(".seekbar").style.marginLeft = percent + "%";
+    currentsong.currentTime = (currentsong.duration)*percent/100
+
+})
+
+// add event listner to header icon
+document.querySelector(".headericon").addEventListener("click", ()=>{
+    document.querySelector(".homeleft").style.left = "0"
+})
+
+document.querySelector(".cross").addEventListener("click", ()=>{
+    document.querySelector(".homeleft").style.left = "-120%"
 })
 main()
 
