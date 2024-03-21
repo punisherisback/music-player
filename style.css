@@ -51,10 +51,10 @@ button{
 /* Home page */
 .home {
     display: flex;
-    height: 89vh;
+    height: 90vh;
     box-sizing: border-box;
     justify-content: center;
-    overflow: hidden;
+   
 
 }
 
@@ -213,6 +213,7 @@ button{
     flex-wrap: wrap;
     gap: 5px;
     padding: 15px;
+    overflow: auto;
    
 }
 .home-left-footer .link{
@@ -263,16 +264,17 @@ button{
 
 .premium {
     display: flex;
+    position: absolute;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
     padding: 5px;
     box-sizing: border-box;
-    
+    bottom: 0;
     background: linear-gradient(to right, #058fb9, #ffff1c);
-   
+  
     overflow: hidden;
-    font-size: 0.6em;
+    font-size: 0.8em;
 
 }
 
@@ -369,7 +371,7 @@ button{
 }
 /* artist */
 .home-right-main {
-    height: 72.5vh;
+    height: 75.5vh;
     width: 74vw;
     box-sizing: border-box;
     background-color: black;
@@ -585,19 +587,6 @@ button{
          z-index: 2;
         
     }
-    .homeright{
-        height: 85vh;
-    }
-    .home-right-main {
-        height: 71.5vh;
-      
-        box-sizing: border-box;
-        background-color: black;
-        border-radius: 10px;
-        overflow: auto;
-        padding: 60px 20px 20px 20px;
-    }
-    
 
 
     .homeleft .home-left-main{
@@ -605,11 +594,12 @@ button{
     }
 
     .homeright{
-        width: 100vw;
+        width: 97vw;
         
     }
     .homeright .home-right-main{
-        width: 100vw;
+        width: 97vw;
+        height: 72.5vh;
         overflow-x: hidden;
     }
     .homeright .home-right-main .artists{
@@ -618,11 +608,11 @@ button{
     }
 
     .homeright .playbar{
-        width: 100vw;
+        width: 97vw;
     }
 
     .homeright .playbar .seekbar-container{
-        width: 100vw;
+        width: 97vw;
     }
     .home-right-header .headericon{
         
