@@ -51,9 +51,10 @@ button{
 /* Home page */
 .home {
     display: flex;
-    height: 90vh;
+    height: 89vh;
     box-sizing: border-box;
     justify-content: center;
+    overflow: hidden;
 
 }
 
@@ -297,7 +298,7 @@ button{
 .homeright {
     width: 75vw;
     height: 90vh;
-
+    
     margin-right: 5px;
     border-radius: 10px;
     box-sizing: border-box;
@@ -490,7 +491,7 @@ button{
 .homeright .playbar{
     height: 9vh;
         width: 74vw;
-        position:sticky;
+       
        position: absolute;
         border-radius: 15px;
         display: flex;
@@ -584,8 +585,11 @@ button{
          z-index: 2;
         
     }
+    .homeright{
+        height: 85vh;
+    }
     .home-right-main {
-        height: 72.5vh;
+        height: 71.5vh;
       
         box-sizing: border-box;
         background-color: black;
