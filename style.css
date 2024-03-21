@@ -52,6 +52,8 @@ button{
 .home {
     display: flex;
     height: 90vh;
+    box-sizing: border-box;
+    justify-content: center;
 
 }
 
@@ -263,25 +265,25 @@ button{
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    padding: 20px;
+    padding: 5px;
     box-sizing: border-box;
-    height: 8.5vh;
+    
     background: linear-gradient(to right, #058fb9, #ffff1c);
-    margin-top: 10px;
-    position: fixed;
+   
     overflow: hidden;
+    font-size: 0.6em;
 
 }
 
 .premium button {
     background-color: white;
     border-radius: 50px;
-    width: 150px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
     font-weight: bold;
     cursor: pointer;
     border: none;
-    font-size: 16px;
+    font-size: 12px;
 }
 .premium button:hover{
     background-color: black;
@@ -315,15 +317,15 @@ button{
 }
 
 .home-right-header .slider img {
-    width: 30px;
+    width: 25px;
 }
 
 .home-right-header button {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background: none;
     border: none;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
 }
 
@@ -485,7 +487,7 @@ button{
     filter: invert();
 }
 .homeright .playbar{
-    height: 10vh;
+    height: 9vh;
         width: 74vw;
         position:sticky;
         bottom: 10.5vh;
@@ -497,7 +499,7 @@ button{
 }
 .homeright .playbar .seekbar-container{
     width: 74vw;
-    height: 5px;
+    height: 3px;
     cursor: pointer;
     border: 2px solid black;
     background-color: #1ed760;
@@ -506,13 +508,13 @@ button{
 }
 .homeright .playbar .seekbar-container:hover
 {
-    height: 12px;
+    height: 8px;
     background-color:#242424;
     transition: 0.25s ease all;
 }
 .homeright .playbar .seekbar-container .seekbar{
-   width: 20px;
-   height: 20px;
+   width: 15px;
+   height: 15px;
    
    border-radius: 50%;
     background-color: #1ed760;
@@ -555,8 +557,8 @@ button{
 .homeright .music-player button{
 
     background-color: black;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
@@ -566,7 +568,7 @@ button{
     transition: 0.5s ease;
 }
 .homeright .music-player img{
-    width: 30px;
+    width: 20px;
 }
 
 
@@ -577,9 +579,13 @@ button{
         position: absolute;
         left: -120%;
         transition: 0.25s ease all;
-         width: 400px;
+         width: 350px;
          z-index: 2;
         
+    }
+
+    .homeleft .home-left-main{
+        overflow: auto;
     }
 
     .homeright{
