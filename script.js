@@ -1,9 +1,23 @@
 
 
 let currentsong = new Audio()
+
+function convertToMinuteSeconds(seconds) {
+    var minutes = Math.floor(seconds / 60);
+    var remainingSeconds = seconds % 60;
+
+    // Adding leading zeros if necessary
+    var minutesString = minutes < 10 ? "0" + minutes : minutes;
+    var secondsString = Math.floor(remainingSeconds); // Round off remaining seconds
+    secondsString = secondsString < 10 ? "0" + secondsString : secondsString;
+
+    return minutesString + ":" + secondsString;
+}
+
+
 // get the table list of songs
 async function getsongs() {
-    let a = await fetch("https://github.com/punisherisback/music-player/tree/main/assets/songs/")
+    let a = await fetch("http://127.0.0.1:3000/assets/songs/")
 
     let response = await a.text()
 
@@ -27,15 +41,11 @@ async function getsongs() {
 
 }
 
-const playmusic = (track) =>{
-    
-    currentsong.src = "/assets/songs/" + track
-    currentsong.play()
-}
+
 
 async function main() {
 
-    
+
 
     // get the list of songs
     let songs = await getsongs()
@@ -44,26 +54,55 @@ async function main() {
     // add songs to library
     let songul = document.querySelector(".mysongs").getElementsByTagName("ul")[0]
     for (const song of songs) {
-        songul.innerHTML = songul.innerHTML + `<li> <img src="assets/imgplay.svg" alt="play"> 
+        songul.innerHTML = songul.innerHTML + `<li> <img id = "${song}" src="assets/imgplay.svg" alt="play"> 
         <div class="songname">${song}</div>
         <div>Sahil</div>
         </li>`
     }
 
+    const playmusic = (track) => {
+
+        currentsong.src = "/assets/songs/" + track
+        currentsong.play()
+        playicon.src = "assets/pause.svg"
+        // var songplayicon = document.getElementById(track);
+        //  songplayicon.src = "assets/music.gif"
+        document.querySelector(".songinfo").innerHTML = `${track}`
+        document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
+        
+    }
+
+
+
     // attach an eventlistner to each song
     Array.from(document.querySelector(".mysongs").getElementsByTagName("li")).forEach(e => {
-        e.addEventListener("click", element=>{
+        e.addEventListener("click", element => {
 
             console.log(e.getElementsByTagName("div")[0].innerHTML)
             playmusic(e.getElementsByTagName("div")[0].innerHTML)
+
         })
-        
+
     })
 
+
+
     // attach an eventlisyner to play, pause and go to the next or previous songs
+    play.addEventListener("click", () => {
         if (currentsong.paused) {
             currentsong.play()
+            playicon.src = "assets/pause.svg"
+
+
         }
+        else {
+            currentsong.pause()
+            playicon.src = "assets/play.svg"
+
+
+
+        }
+    })
     // play songs
     var audio = new Audio(songs[1])
     audio.play()
@@ -75,6 +114,19 @@ async function main() {
         console.log(duration, currentsrc, currenttime)
     })
 }
+
+// add event listner for current time 
+currentsong.addEventListener("timeupdate", () => {
+    
+    document.querySelector(".songtime").innerHTML = `${convertToMinuteSeconds(currentsong.currentTime)}/${convertToMinuteSeconds(currentsong.duration)}`
+    document.querySelector(".seekbar").style.marginLeft = (currentsong.currentTime/currentsong.duration)*100 + "%"
+})
+
+
+// add eventlistner to seekbar container
+document.querySelector(".seekbar-container").addEventListener("click", e=>{
+    document.querySelector(".seekbar").style.marginLeft = (e.offsetX/e.target.getBoundingClientRect().width)*100 + "%"
+})
 main()
 
 

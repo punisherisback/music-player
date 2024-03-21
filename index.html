@@ -33,6 +33,7 @@
 
                     <ul>
                         <!-- Songs Comes using Javascript -->
+
                     </ul>
                 </div>
 
@@ -209,11 +210,18 @@
 
             </div>
             <div class="playbar">
-                <div class="seekbar"></div>
-                <div class="music-player">
-                    <button id="previous"><img src="assets/previous.svg" alt="previous"></button>
-                    <button id="play"><img src="assets/play.svg" alt="play"></button>
-                    <button id="next"><img src="assets/next.svg" alt="next"></button>
+                <div class="seekbar-container">
+                    <div class="seekbar"></div>
+                </div>
+
+                <div class="icons-info">
+                    <div class="songinfo"> </div>
+                    <div class="music-player">
+                        <button id="previous"><img src="assets/previous.svg" alt="previous"></button>
+                        <button id="play"><img id="playicon" src="assets/play.svg" alt="play"></button>
+                        <button id="next"><img id="nexticon" src="assets/next.svg" alt="next"></button>
+                    </div>
+                    <div class="songtime"> </div>
                 </div>
             </div>
         </div>

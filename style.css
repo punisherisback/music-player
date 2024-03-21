@@ -179,7 +179,9 @@ button{
     width: 170px;
     overflow: hidden;
 }
-
+.mysongs img{
+    width: 40px;
+}
 .createplaylist button {
     background-color: white;
     border-radius: 50px;
@@ -481,21 +483,62 @@ button{
         gap: 10px;
         background-color: black;
 }
-.homeright .playbar .seekbar{
+.homeright .playbar .seekbar-container{
     width: 74vw;
-    height: 3px;
-    background-color: #1ed760;
+    height: 5px;
+    cursor: pointer;
     border: 2px solid black;
+    background-color: #1ed760;
+    display: flex;
+    align-items: center;
+}
+.homeright .playbar .seekbar-container:hover
+{
+    height: 12px;
+    background-color:#242424;
+    transition: 0.25s ease all;
+}
+.homeright .playbar .seekbar-container .seekbar{
+   width: 20px;
+   height: 20px;
+   
+   border-radius: 50%;
+    background-color: #1ed760;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: inset  -2px -2px 4px 4px #000000c7;
+}
+
+
+.homeright .playbar .icons-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .homeright .music-player{
         
         display: flex;
         justify-content: center;
         align-items: center;
-       
-        
         gap: 40px;
         
+}
+.homeright .playbar .songinfo{
+    width: 300px;
+    height: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+    overflow: hidden;
+}
+
+.homeright .playbar .songtime{
+    width: 300px;
+    height: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
 }
 .homeright .music-player button{
 
