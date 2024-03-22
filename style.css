@@ -625,6 +625,16 @@ button{
         height: 85vh;
     }
     .home-left-main{
-        height: 63vh;
+        height: 62vh;
+    }
+    .home-right-footer{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .home-right-footer .links{
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
     }
 }
