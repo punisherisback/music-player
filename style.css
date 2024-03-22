@@ -82,6 +82,7 @@ button{
     width: 30px;
     background-color:#c3c3c3;
     border-radius: 50%;
+    display: none;
 }
 
 .home-left-header ul li {
@@ -491,7 +492,7 @@ button{
     filter: invert();
 }
 .homeright .playbar{
-    height: 9vh;
+    
         width: 74vw;
        z-index: 3;
        position: absolute;
@@ -531,6 +532,8 @@ button{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 3px;
+    
 }
 .homeright .music-player{
         
@@ -542,11 +545,12 @@ button{
 }
 .homeright .playbar .songinfo{
     width: 300px;
-    height: 30px;
+    height: 15px;
    display: flex;
+  
    justify-content: center;
    align-items: center;
-    
+    font-size: 0.8em;
     overflow: hidden;
 }
 
@@ -556,6 +560,7 @@ button{
    display: flex;
    justify-content: center;
    align-items: center;
+   font-size: 0.8em;
   
 }
 .homeright .music-player button{
@@ -585,21 +590,25 @@ button{
         transition: 0.25s ease all;
          width: 350px;
          z-index: 2;
+         
+         
         
     }
 
 
     .homeleft .home-left-main{
         overflow: auto;
+        height: 50vh;
     }
 
     .homeright{
-        width: 97vw;
+        width: 90vw;
+        
         
     }
     .homeright .home-right-main{
         width: 97vw;
-        height: 72.5vh;
+        height: 68vh;
         overflow-x: hidden;
         padding: 10px;
     }
@@ -627,7 +636,7 @@ button{
     }
     .home-left-main{
         height: 60vh;
-        padding-bottom: 50px;
+        padding-bottom: 20px;
     }
     .home-right-footer{
         flex-direction: column;
@@ -640,4 +649,53 @@ button{
         justify-content: center;
         align-items: center;
     }
+
+    .home-left-header .cross{
+        display: block;
+    }
+
+    
+.homeright .playbar .icons-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    
+}
+.homeright .music-player{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        
+}
+.homeright .playbar .songinfo{
+    width: 300px;
+    height: 15px;
+   display: flex;
+   padding: 3px;
+   justify-content: center;
+   align-items: center;
+   
+    overflow: hidden;
+}
+
+.homeright .playbar .songtime{
+    width: 60px;
+  
+    height: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+}
+.homeright .music-player button{
+
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 }
