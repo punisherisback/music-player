@@ -493,7 +493,7 @@ button{
 .homeright .playbar{
     height: 9vh;
         width: 74vw;
-       
+       z-index: 3;
        position: absolute;
         border-radius: 15px;
         display: flex;
@@ -618,6 +618,13 @@ button{
         
         display: block;
     }
-    
-    
+    .premium{
+        position: relative;
+    }
+    .homeleft{
+        height: 85vh;
+    }
+    .home-left-main{
+        height: 63vh;
+    }
 }
