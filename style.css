@@ -601,6 +601,7 @@ button{
         width: 97vw;
         height: 72.5vh;
         overflow-x: hidden;
+        padding: 10px;
     }
     .homeright .home-right-main .artists{
         justify-content: center;
@@ -622,14 +623,16 @@ button{
         position: relative;
     }
     .homeleft{
-        height: 85vh;
+        height: 83vh;
     }
     .home-left-main{
-        height: 62vh;
+        height: 60vh;
+        padding-bottom: 50px;
     }
     .home-right-footer{
         flex-direction: column;
         gap: 50px;
+        margin: 10px;
     }
     .home-right-footer .links{
         flex-direction: column;
