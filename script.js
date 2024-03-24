@@ -1,8 +1,13 @@
 
 
 let currentsong = new Audio()
+let songs;
+let playmusic;
 
 function convertToMinuteSeconds(seconds) {
+    if(isNaN(seconds) || seconds<0){
+        return "00:00"
+    }
     var minutes = Math.floor(seconds / 60);
     var remainingSeconds = seconds % 60;
 
@@ -48,7 +53,7 @@ async function main() {
 
 
     // get the list of songs
-    let songs = await getsongs()
+   songs = await getsongs()
     console.log(songs)
 
     // add songs to library
@@ -60,7 +65,7 @@ async function main() {
         </li>`
     }
 
-    const playmusic = (track) => {
+   playmusic = (track) => {
 
         currentsong.src = "/assets/songs/" + track
         currentsong.play()
@@ -139,6 +144,23 @@ document.querySelector(".headericon").addEventListener("click", ()=>{
 document.querySelector(".cross").addEventListener("click", ()=>{
     document.querySelector(".homeleft").style.left = "-120%"
 })
+
+
+// add event listner to previous and next 
+previous.addEventListener("click", ()=>{
+    let index = songs.indexOf(currentsong.src.split("/").slice(-1) [0])
+    if ((index-1)>=0)
+    playmusic(songs[index+1])
+    
+})
+
+next.addEventListener("click", ()=>{
+   
+    let index = songs.indexOf(currentsong.src.split("/").slice(-1) [0])
+    if ((index+1)>length)
+    playmusic(songs[index+1])
+})
+
 main()
 
 
