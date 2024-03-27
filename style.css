@@ -7,7 +7,9 @@
     margin: 0;
     padding: 0;
 }
-
+:root{
+    --a: 0
+}
 
 body {
 
@@ -411,6 +413,7 @@ button{
     background-color: #242424;
     transform: scale(1.05);
     transition: 0.25s ease all;
+    --a: 1;
 }
 
 .home-right-main .artists .cards .imgplay{
@@ -419,8 +422,10 @@ button{
     right: 16px;
     bottom: 90px;
     background-color:#171717;
-    
+    opacity: var(--a);
     border-radius: 50%;
+    transition: 0.5s ease all;
+   
 }
 .home-right-main .artists .cards .cardimage {
     width: 160px;
