@@ -22,7 +22,7 @@ function convertToMinuteSeconds(seconds) {
 
 // get the table list of songs
 async function getsongs() {
-    let a = await fetch("https://punisherisback.github.io/music-player/assets/songs/")
+    let a = await fetch("/assets/songs/")
 
     let response = await a.text()
 
